@@ -28,10 +28,5 @@ RUN ln -s /etc/nginx/sites-available/kvarak.net /etc/nginx/sites-enabled/kvarak
 # work dir
 WORKDIR /etc/nginx
 
-# add entrypoing
-ADD docker-entrypoint.sh .
-
 # make certs dir as volume
 VOLUME ["/etc/letsencrypt"]
-
-CMD ["/etc/nginx/docker-entrypoint.sh"]
